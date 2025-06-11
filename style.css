@@ -1,0 +1,669 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Poppins", sans-serif;
+  box-sizing: border-box;
+}
+
+body {
+  overflow-x: hidden;
+}
+
+.container {
+  height: 100vh;
+  width: 100%;
+}
+
+header {
+  display: flex;
+  max-width: 100%;
+  height: 8%;
+  align-items: center;
+  justify-content: center;
+  background-color: #fbf9f6;
+  border-bottom: 1px solid #e7e7e8;
+}
+
+header a {
+  text-decoration: none;
+  font-family: "Times New Roman", Times, serif;
+  font-size: 20px;
+  color: black;
+}
+
+nav {
+  width: 100%;
+  height: 10%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+nav img {
+  width: 120px;
+  height: 75px;
+  margin-left: 25px;
+}
+
+.nav-btn {
+  margin-right: 30px;
+  position: relative;
+}
+
+#host {
+  padding: 8px 12px;
+  margin-right: 40px;
+  text-align: center;
+  background-color: white;
+  border: 1px solid grey;
+  border-radius: 10px;
+  font-family: "Times New Roman", Times, serif;
+  font-size: 18px;
+  font-weight: lighter;
+  cursor: pointer;
+}
+
+#host:hover {
+  transform: scale(1.05);
+  background-color: rgb(218, 214, 214);
+}
+
+.contact-btns {
+  border: none;
+  padding: 5px;
+  background-color: white;
+  cursor: pointer;
+}
+
+.contact-btns:hover {
+  transform: scale(1.05);
+  background-color: rgb(218, 214, 214);
+}
+
+.menu {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.menu-list {
+  background-color: white;
+  position: absolute;
+  top: 80px;
+  right: 10px;
+  width: 400px;
+  height: 500px;
+  list-style: none;
+  padding: 20px 20px;
+  border: 1px solid #e7e7e8;
+  border-radius: 10px;
+  z-index: 10;
+  display: none;
+}
+
+.menu-list.show {
+  display: block;
+}
+
+.menu-list li {
+  padding: 14px;
+  cursor: pointer;
+}
+.menu-list li a {
+  text-decoration: none;
+  color: black;
+  font-size: 20px;
+}
+
+.menu-list li:hover {
+  background-color: #f0f0f0;
+}
+
+main {
+  width: 100%;
+}
+
+.car-image {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  height: 650px;
+  background-image: url("./images/car-image.png");
+  background-position: center;
+  background-size: cover;
+}
+
+.info {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 20px;
+  width: 65%;
+  height: 12%;
+  background-color: white;
+  border-radius: 40px;
+}
+
+.input-group {
+  margin: 5px 20px;
+}
+
+.input-group.location input {
+  width: 250px;
+  height: 30px;
+  border-radius: 20px;
+  border: none;
+  text-align: center;
+  font-size: 18px;
+}
+.input-group.date-time {
+  border-left: 1px solid grey;
+  padding: 8px;
+}
+.input-group.date-time input {
+  width: 150px;
+  border: none;
+  font-size: 20px;
+  padding-left: 10px;
+}
+.input-group.date-time button {
+  width: 50px;
+  height: 50px;
+  border: none;
+  border-radius: 50%;
+  background-color: blue;
+  color: white;
+}
+
+.skip-rental {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  text-align: center;
+  padding-bottom: 50px;
+}
+.skip-rental h1 {
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  font-size: 70px;
+  font-weight: 800;
+}
+
+.skip-rental p {
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  font-size: 40px;
+}
+.explore-car {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 50px 80px;
+  background-color: #fbf9f6;
+}
+.explore-car img {
+  width: 60%;
+  height: 250px;
+}
+.explore-car-info {
+  text-align: start;
+}
+.explore-car-info p.rent {
+  font-size: 40px;
+  font-weight: 500;
+}
+.explore-car-info p {
+  font-size: 20px;
+  font-weight: 400;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  padding: 10px;
+}
+
+.explore-car-info button {
+  border: 1px solid grey;
+  padding: 20px 50px;
+  border-radius: 10px;
+  margin-top: 10px;
+  font-size: 20px;
+  font-weight: 600;
+  background-color: blue;
+  color: #e7e7e8;
+  cursor: pointer;
+}
+
+.explore-car-info button:hover {
+  transform: scale(1.05);
+}
+
+.cards-container {
+  width: 100%;
+  margin-top: 50px;
+}
+.cards-nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  padding: 30px;
+}
+
+.cards-nav p {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 24px;
+  font-weight: 700;
+}
+
+.arrow-btns button {
+  border: none;
+  margin: 20px;
+  background-color: white;
+}
+
+.arrow-btns button :hover {
+  transform: scale(1.5);
+}
+
+.cards {
+  padding: 10px;
+  max-width: 1400px;
+  margin: 0 auto;
+  overflow: hidden;
+}
+
+.all-cards {
+  min-width: 100vw;
+  white-space: nowrap;
+  max-width: 1000px;
+  transition: all 0.3s;
+}
+
+.card {
+  height: 300px;
+  width: 250px;
+  border-radius: 20px;
+  border-bottom: 1px solid gray;
+  margin-left: 25px;
+  display: inline-block;
+}
+.card a {
+  text-decoration: none;
+}
+
+.card a img {
+  border-radius: 20px;
+  width: 250px;
+  height: 250px;
+}
+.card a p {
+  text-align: center;
+  margin-top: 10px;
+  font-size: 20px;
+  font-weight: 600;
+  color: black;
+}
+
+.card a img:hover {
+  opacity: 0.5;
+  transform: scale(1.1);
+}
+.card a p:hover {
+  color: blue;
+}
+
+.cards-destination {
+  padding: 10px;
+  max-width: 1400px;
+  margin: 0 auto;
+  overflow: hidden;
+}
+
+.all-cards-destination {
+  min-width: 100vw;
+  white-space: nowrap;
+  max-width: 1000px;
+  transition: all 0.3s;
+}
+
+.card-destination {
+  height: 300px;
+  width: 250px;
+  border-radius: 20px;
+  border-bottom: 1px solid gray;
+  margin-left: 25px;
+  display: inline-block;
+}
+
+.card-destination a {
+  text-decoration: none;
+}
+
+.card-destination a img {
+  border-radius: 20px;
+  width: 250px;
+  height: 250px;
+}
+.card-destination a p {
+  text-align: center;
+  margin-top: 10px;
+  font-size: 20px;
+  font-weight: 600;
+  color: black;
+}
+
+.card-destination a img:hover {
+  opacity: 0.5;
+  transform: scale(1.1);
+}
+.card-destination a p:hover {
+  color: blue;
+}
+
+.singleCar {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  background-color: #f0f0f0;
+  margin: 50px;
+}
+
+.singleCar img {
+  width: 600px;
+  height: 500px;
+}
+
+.onTuro {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+}
+.onTuro p {
+  font-size: 20px;
+  font-weight: 500;
+}
+.onTuro button {
+  padding: 25px 40px;
+  border-radius: 15px;
+  color: white;
+  background-color: black;
+  font-size: 24px;
+}
+
+#teenage {
+  font-size: 35px;
+  font-weight: 600;
+}
+
+.onTuro button:hover {
+  transform: scale(1.02);
+  opacity: 0.9;
+}
+
+.fuel {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 20px;
+  margin: 50px;
+}
+
+.fuel h1 {
+  font-size: 60px;
+  font-weight: 700;
+}
+
+.fuel p {
+  font-size: 25px;
+}
+
+.fuel button {
+  padding: 25px 40px;
+  font-size: 20px;
+  font-weight: 700;
+  border-radius: 15px;
+  background-color: blue;
+  color: white;
+  opacity: 0.8;
+}
+
+.fuel button:hover {
+  opacity: 1;
+}
+
+.blog {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.blog a img {
+  width: 1300px;
+  margin: 40px;
+}
+
+.car-host {
+  display: grid;
+  grid-template-columns: 1fr, 1fr;
+  grid-template-rows: 1fr, 1fr;
+  width: 80%;
+  height: 900px;
+  margin: 0 auto;
+  background-image: url("./images/hands.png");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.book{
+  grid-area: 1/1/1/1;
+  margin-top: 200px;
+  margin-left: 200px;
+}
+
+.book a{
+  text-decoration: none;
+  font-size: 40px;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: 700;
+  color: blue;
+  cursor: pointer;
+}
+
+.book p{
+  font-size: 20px;
+  margin-top: 20px;
+}
+
+.book a:hover{
+  text-decoration: underline;
+ 
+}
+
+.host{
+  grid-area: 2/2/2/2;
+  margin-bottom: 20px;
+  margin-left: 200px;
+}
+
+.host a{
+  text-decoration: none;
+  font-size: 40px;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: 700;
+  color: blue;
+  cursor: pointer;
+}
+
+.host p{
+  font-size: 20px;
+  margin-top: 20px;
+}
+
+.host a:hover{
+  text-decoration: underline;
+ 
+}
+
+footer{
+  width: 100%;
+  background-color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background-color: #f0f0f0;
+}
+
+.upperFooter{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction:column;
+  border-bottom: 1px solid grey;
+}
+.vehiclesTypes{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 50px;
+  margin: 20px;
+}
+
+.vehiclesTypes ul{
+  padding: 20px;
+ list-style-type: none;
+}
+.vehiclesTypes ul li{
+  margin: 10px;
+}
+
+.vehiclesTypes ul li a{
+  text-decoration: none;
+  color: black;
+ 
+}
+.vehiclesTypes ul li p{
+  color: black;
+   margin-bottom: 20px;
+  font-size: 20px;
+  font-weight: 700;
+}
+
+.vehiclesTypes ul li a:hover{
+  text-decoration: underline;
+}
+
+.ukCities{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 50px;
+  margin-right: 120px;
+}
+
+.ukCities ul{
+  padding: 23px;
+ list-style-type: none;
+}
+.ukCities ul li{
+  margin: 10px;
+}
+
+.ukCities ul li a{
+  text-decoration: none;
+  color: black;
+ 
+}
+.ukCities ul li p{
+  color: black;
+   margin-bottom: 20px;
+  font-size: 20px;
+  font-weight: 700;
+}
+
+.ukCities ul li a:hover{
+  text-decoration: underline;
+}
+
+
+.airports{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 50px;
+  margin: 20px;
+}
+
+.airports ul{
+ list-style-type: none;
+}
+.airports ul li{
+  margin: 10px;
+}
+
+.airports ul li a{
+  text-decoration: none;
+  color: black;
+ 
+}
+.airports ul li p{
+  color: black;
+   margin-bottom: 20px;
+  font-size: 20px;
+  font-weight: 700;
+}
+
+.airports ul li a:hover{
+  text-decoration: underline;
+}
+
+#arrow{
+  border: none;
+}
+
+.extrafooter{
+  display: none;
+}
+
+.lowerFooter{
+  display: grid;
+  grid-template-columns:repeat(5,1fr);
+ margin-left: 200px;
+
+ 
+}
+.socialMedia{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.soialIcons{
+  margin-bottom: 10px;
+}
+.soialIcons i{
+  padding: 5px;
+}
+
+.lowerFooter ul{
+  list-style-type: none;
+  
+}
+
+.lowerFooter ul li{
+  padding: 5px;
+  
+}
+.lowerFooter ul li a{
+text-decoration: none;
+color: black;
+}
+
+.lowerFooter ul li p{
+  font-size: 24px;
+  margin-bottom: 10px;
+  font-weight: 600;
+}
+
+.lowerFooter ul li a:hover{
+  color: blue;
+  text-decoration: underline;
+}
